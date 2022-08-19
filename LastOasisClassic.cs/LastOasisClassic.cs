@@ -37,7 +37,7 @@ namespace WindowsGSM.Plugins
         public override string StartPath => @"Mist\Binaries\Win64\MistServer-Win64-Shipping.exe"; // Game server start path
         public string FullName = "LastOasis Dedicated Server Classic"; // Game server FullName
         public bool AllowsEmbedConsole = true;  // Does this server support output redirect?
-        public int PortIncrements = 2; // This tells WindowsGSM how many ports should skip after installation
+        public int PortIncrements = 1; // This tells WindowsGSM how many ports should skip after installation
         public object QueryMethod = new A2S(); // Query method should be use on current server type. Accepted value: null or new A2S() or new FIVEM() or new UT3()
 
 
@@ -46,7 +46,7 @@ namespace WindowsGSM.Plugins
         public string QueryPort = "27015"; // Default query port
         public string Defaultmap = "neon_server1"; // Default map name
         public string Maxplayers = "100"; // Default maxplayers
-        public string Additional = "-CustomerKey=GameServerRegistrationKey -ProviderKey=SelfHostedGameServersRegistrationKey"; // Additional server start parameter
+        public string Additional = "-nouPnP -CustomerKey=GameServerRegistrationKey -ProviderKey=SelfHostedGameServersRegistrationKey"; // Additional server start parameter
 
 
         // - Create a default cfg for the game server after installation
@@ -68,7 +68,7 @@ namespace WindowsGSM.Plugins
             string shipExePath = Functions.ServerPath.GetServersServerFiles(_serverData.ServerID, StartPath);
 
             // Prepare start parameter
-			string param = $" -log -nouPnP -force_steamclient_link -messaging -NoLiveServer -EnableCheats -backendapiurloverride=classic-backend.last-oasis.com"; // Set basic parameters
+			string param = $" -log -force_steamclient_link -messaging -NoLiveServer -EnableCheats -backendapiurloverride=classic-backend.last-oasis.com"; // Set basic parameters
 			param += string.IsNullOrWhiteSpace(_serverData.ServerMap) ? string.Empty : $" -identifier={_serverData.ServerMap}"; //Use GUI Map config to set server name
             param += string.IsNullOrWhiteSpace(_serverData.ServerPort) ? string.Empty : $" -port={_serverData.ServerPort}"; 
 			param += string.IsNullOrWhiteSpace(_serverData.ServerParam) ? string.Empty : $" {_serverData.ServerParam}"; 
