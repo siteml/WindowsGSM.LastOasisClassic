@@ -19,7 +19,7 @@ namespace WindowsGSM.Plugins
             author = "kessef (edit by siteml)",
             description = "WindowsGSM plugin for supporting LastOasis Classic (Season 4) Dedicated Server",
             version = "1.1",
-            url = "https://github.com/dkdue/WindowsGSM.LastOasisClassic", // Github repository link (Best practice)
+            url = "https://github.com/siteml/WindowsGSM.LastOasisClassic", // Github repository link (Best practice)
             color = "#34c9eb" // Color Hex
         };
 
