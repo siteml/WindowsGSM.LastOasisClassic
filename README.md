@@ -1,8 +1,9 @@
 # WindowsGSM.LastOasisClassic
 🧩WindowsGSM plugin that provides Last Oasis Classic (S4) Dedicated server support!
 
-# The Game (Select "classic" beta branch!)
+# The Game
 https://store.steampowered.com/app/903950/Last_Oasis/
+<br>(select "classic" beta branch!)
 
 # Requirements
 WindowsGSM >= 1.21.0
